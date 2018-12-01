@@ -6,8 +6,7 @@ $(document).ready(function() {
   if (window.location.href === 'http://127.0.0.1:5500/') {
     url = 'http://127.0.0.1:5500/data.json';
   } else if (window.location.href === 'https://bitcoin-featured.github.io/') {
-    url =
-      'http://cors.io/?https://github.com/bitcoin-featured/bitcoin-featured.github.io/blob/master/data.json';
+    url = 'https://bitcoin-featured.github.io/data.json';
   }
 
   $.ajax({
