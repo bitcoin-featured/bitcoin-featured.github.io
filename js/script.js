@@ -7,7 +7,7 @@ $(document).ready(function() {
     url = 'http://127.0.0.1:5500/data.json';
   } else if (window.location.href === 'https://bitcoin-featured.github.io/') {
     url =
-      'https://github.com/bitcoin-featured/bitcoin-featured.github.io/blob/master/data.json';
+      'http://cors.io/?https://github.com/bitcoin-featured/bitcoin-featured.github.io/blob/master/data.json';
   }
 
   $.ajax({
