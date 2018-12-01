@@ -1,11 +1,4 @@
 $(document).ready(function() {
-  var filterizd = $('.filtr-container').filterizr({});
-
-  $('.filterListItem').on('click', function() {
-    $('.filterListItem').removeClass('active');
-    $(this).addClass('active');
-  });
-
   $.ajax({
     url: 'http://127.0.0.1:5500/data.json',
 
@@ -15,15 +8,30 @@ $(document).ready(function() {
       $.each(respuesta, function(index, elemento) {
         /* console.log(elemento); */
         galleryContainer.append(
-          '<div class="col-md-4 filtr-item thumbnail">' +
+          '<div class="col-md-4 filtr-item thumbnail" data-category="all" data-sort="' +
+            elemento.title +
+            '">' +
             '<img src=' +
             elemento.img_small +
             ' data-toggle="modal" data-target="#exampleModalCenter" data-toggle="modal" data-target="#exampleModalCenter"></img>' +
             '<input type="hidden" value="' +
             elemento.img +
             '">' +
+            '<input type="hidden" value="' +
+            elemento.title +
+            '">' +
+            '<span class="item-desc">' +
+            elemento.title +
+            '</span>' +
             '</div>'
         );
+      });
+
+      var filterizd = $('.filtr-container').filterizr({});
+
+      $('.filterListItem').on('click', function() {
+        $('.filterListItem').removeClass('active');
+        $(this).addClass('active');
       });
     },
 
@@ -33,16 +41,23 @@ $(document).ready(function() {
   });
 
   $('.galleryContainer').on('click', '.thumbnail img', function() {
-    console.log('click');
+    /* console.log('click');
     console.log(
       'valor de ' +
         $(this)
           .next()
           .val()
-      /* $('.thumbnail img')
+      $('.thumbnail img')
           .next()
-          .val() */
+          .val()
+    ); */
+    $('.modal-title').html(
+      $(this)
+        .next()
+        .next()
+        .val()
     );
+    $('#picture').attr('src', '');
     $('#picture').attr(
       'src',
       $(this)

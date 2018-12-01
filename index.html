@@ -18,18 +18,6 @@
         <div
           class="col-md-12 d-flex flex-wrap justify-content-between galleryFilters"
         >
-          <ul class="list-inline filterList">
-            <li class="filterListItem btn violetBtn" data-filter="all">ALL</li>
-            <li class="filterListItem btn violetBtn" data-filter="animals">
-              ANIMALS
-            </li>
-            <li class="filterListItem btn violetBtn" data-filter="nature">
-              NATURE
-            </li>
-            <li class="filterListItem btn violetBtn" data-filter="places">
-              PLACES
-            </li>
-          </ul>
           <input
             type="text"
             placeholder="Search"
@@ -40,26 +28,7 @@
         </div>
       </div>
 
-      <div class="row filtr-container galleryContainer">
-        <!-- item -->
-        <div
-          class="col-md-4 filtr-item thumbnail"
-          data-category="all,animals"
-          data-sort="cat"
-        >
-          <!--
-            <img
-              src="images/animals/animals (1).jpg"
-              alt=""
-              data-toggle="modal"
-              data-target="#exampleModalCenter"
-              data-toggle="modal"
-              data-target="#exampleModalCenter"
-            />
-            <span class="item-desc">Cat</span>
-          -->
-        </div>
-      </div>
+      <div class="row filtr-container galleryContainer"></div>
     </div>
 
     <!-- Modal -->
@@ -74,7 +43,7 @@
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+            <h5 class="modal-title" id="exampleModalLongTitle"></h5>
             <button
               type="button"
               class="close"
@@ -93,16 +62,18 @@
               id="picture"
             />
           </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
+          <!--
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          -->
         </div>
       </div>
     </div>
