@@ -30,6 +30,10 @@ body {
   box-shadow: 0px 0px 5px #610f7f;
 }
 
+.galleryContainer {
+  height: 100vh !important;
+}
+
 .galleryContainer .thumbnail {
   padding-bottom: 20px;
   position: relative;
