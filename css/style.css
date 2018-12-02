@@ -31,7 +31,7 @@ body {
 }
 
 .galleryContainer {
-  height: 100vh !important;
+  height: 100% !important;
 }
 
 .galleryContainer .thumbnail {
